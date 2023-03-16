@@ -10,4 +10,7 @@ migratedown:
 sqlc:
 	sqlc generate
 
-.PHONY: postgres migrateup migratedown sqlc
+test:
+	go test -v -cover ./...
+
+.PHONY: postgres migrateup migratedown sqlc test
